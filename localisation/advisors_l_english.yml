@@ -1,0 +1,27 @@
+﻿l_english:
+wizard_political_genius:0 "Political Genius"
+wizard_political_genius_desc:0 "This Wizard is a genius in the realm of politics"
+wizard_political_genius_name:0 "Political Wizard"
+
+economic_genius:0 "Economic Genius"
+economic_genius_desc:0 "This Wizard is a a master at making our economy dance to his tune"
+economic_genius_name:0 "Economic Wizard"
+
+construction_supervisor:0 "Construction Supervisor"
+construction_supervisor_desc:0 "In his civilian life this Wizard built many, many factories, and now he is working for the Wizolution!"
+construction_supervisor_name:0 "Construction Wizard"
+
+marshall_wizard:0 "Marshall Wizard"
+marshall_wizard_desc:0 "Leader of our military forces"
+
+infantry_wizard:0 "Infantry Wizard"
+infantry_wizard_desc:0 "An expert in the field of infantry tactics"
+
+artillery_wizard:0 "Artillery Wizard"
+artillery_wizard_desc:0 "An expert in the field of artillery tactics"
+
+charismatic_wizard:0 "Charismatic Wizard"
+charismatic_wizard_desc:0 "His lively aura decreases the amount of time the troops need to rest"
+
+armored_wizard:0 "Armored Wizard"
+armored_wizard_desc:0 "This Wizard is literally a tank, who knows more about tanks than tanks?"

@@ -1,0 +1,35 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_wizard_political_genius"
+		texturefile = "gfx/interface/advisors/wizard_political_genius.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_economic_genius"
+		texturefile = "gfx/interface/advisors/economic_genius.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_construction_supervisor"
+		texturefile = "gfx/interface/advisors/construction_supervisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_marshall_wizard"
+		texturefile = "gfx/interface/advisors/marshall_wizard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_infantry_wizard"
+		texturefile = "gfx/interface/advisors/infantry_wizard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_artillery_wizard"
+		texturefile = "gfx/interface/advisors/artillery_wizard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_charismatic_wizard"
+		texturefile = "gfx/interface/advisors/charismatic_wizard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_armored_wizard"
+		texturefile = "gfx/interface/advisors/armored_wizard.dds"
+	}
+}

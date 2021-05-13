@@ -1,0 +1,94 @@
+﻿l_english:
+
+  chaos_in_the_capital:0 "Chaos in the Capital!"
+  chaos_in_the_capital_desc:0 "A new upstart officer has gathered a massive following amongst the Danes, and is having them all change their names to match his: Wizard. There is no way to identify one from another, all government documents are now void and chaos reigns in on the once relatively calm country."
+
+  censor_the_press:0 "Censor the Press"
+  censor_the_press_desc:0 "Recently there has been much being said about the Supreme Wizard, and not all of it has been positive. Perhaps we should pay these citizens a visit and remind them of what it means to be a citizen of the Wizolution."
+
+  assemble_the_wizards:0 "Assemble the Wizards"
+  assemble_the_wizards_desc:0 "Our country is still in a sorry state after the abrupt uprising and takeover by the glorious Supreme Wizard, and there is much to be done to bring about the future which our glorious nation deserves!"
+
+  cleanse_the_old_guard:0 "Cleanse the Old Guard"
+  cleanse_the_old_guard_desc:0 "There are still those among the officer corp who deny the Supreme Wizard's legitimacy to rule, these enemies of the state must be dispatched of swiftly and queitly."
+
+wizolution_to_curriculum:0 "Add the Wizolution to the Curriculum"  
+wizolution_to_curriculum_desc:0 "Adding the great Wizolution to the schoolchildrens curriculum can greatly increase their patriotism and willingness to lay forth the ultimate sacrifice for our Supreme Wizard and great Nation."
+
+wizardian_economic_theory:0 "New Wizardian Economic Theory"
+wizardian_economic_theory_desc:0 "The Supreme Wizard in all of his greatness and intelligence has come up with a new economic theory which makes it so only those who work 12 hour shifts get food at the end of the day."
+
+collectivize:0 "Collectivize the Industrialist's Property"
+collectivize_desc:0 "Although the Supreme Wizard has created a unique ideology fitting for the unique people of our nation, the current lack of state owned industry is worrying to say the least. The supreme Wizard has, quite wisely, decided to collectivize all of the now defunct industrialist's factories for use of the glorious Wizolution!"
+
+wizardian_research_theory:0 "New Wizardian Research Theory"
+wizardian_research_theory_desc:0 "Much like the new economic theory the great Supreme Wizard has come up with a research theory which is sure to increase our countries industrial and military output. The research theory revolves around threatening the scientists with 20 years of hard labor if they do not come up with new technologies quick enough, quite ingenious is it not?"
+
+spread_wizolution_1:0 "Spread the Word of the Wizolution!"
+spread_wizolution_1_desc:0 "The other "countries" who surround us are as good as barbaric compared to us, we need to ensure that all follow the leadership of the Supreme Wizard."
+
+weapon_requisitions:0 "Requisition Weapons from Populace"
+weapon_requisitions_desc:0 "We find our stockpiles not up to the standards required to fully export the Wizolution so the populace must make some sacrifices for the greater good. Theres also several caches from the previous governments which we can utilize."
+
+raise_the_reserves:0 "Raise the Reserves"
+raise_the_reserves_desc:0 "Our army is not the size it will need to be if we wish to take on giants such as Germany or the Soviets, and even though the divisions we are calling up are not of the best quality there is no training like the front!"
+
+utilize_cropdusters:0 "Utilize Cropdusters"
+utilize_cropdusters_desc:0 "Although cropdusters make for poor planes they are better than no planes! Our factory workers have been working hard to convert them into something more usable in our current battle against Sweden."
+
+conscript_wizards:0 "Increase Wizard Conscription"
+conscript_wizards_desc:0 "Even though we have taken massive strides in increasing our army size it means nothing if we cannot replace the fallen. This means we desperately need to start conscripting those fit and healthy enough to serve the Wizolution!"
+
+integrate_swe:0 "Integration of Sweden"
+integrate_swe_desc:0 "Although Sweden was merely a drop in the bucket in terms of the task ahead of us this proves that the Wizolution can, beyond doubt, succeed! Now we must ensure that these newly liberated peoples are avid supporters of the Wizolution"
+
+initial_industrial_report:0 "Report on Industry: Initial"
+initial_industrial_report_desc:0 "The initial industrial reports we are recieving throughout the country all show one trend: we are desperately lacking resources and infranstructure, and as such our top economists have come up with a plan to fix these maluses."
+
+stabilized_report:0 "Report on Industry: Stabilized"
+stabilized_report_desc:0 "Thanks to our previous efforts of connecting the country and remediating the resource shortage our population has seen a drastic increase in growth. Outsides speculate this is because everyone has the same name which increase the chance of 'accidents' happening, but what do they know!"
+
+swe_industry_report:0 "Industrial Report: Sweden"
+swe_industry_report_desc:0 "Although our army has proven more than capable so far our industry needs to prove its mettle as well. Our top economists have come up with a plan to integrate all the newly acquired Swedish industry."
+
+reform_the_military:0 "Reform the Military"
+reform_the_military_desc:0 "With many problematic leaders out of the way we are now able to start the process of molding the military into a tool for the spreading of the Wizolution"
+
+spread_wizolution_norway:0 "Spread The Wizolution to Norway"
+spread_wizolution_norway_desc:0 "We must continue to spread the Wizolution throughout all of Scandanavia, and Norway is the perfect target to go for next."
+
+marine_training:0 "Training up Marines"
+marine_training_desc:0 "Although Norway is famous for its mountains it is also famous for its fjords. Given the choice of training up a force to punch through the mountains easily, or push across the fjords we have gone with the latter."
+
+landing_craft:0 "Design Ladning Craft"
+landing_craft_desc:0 "although it is doubtful we will need to do a naval invasion of norway, in the future we will most certainly need a viable method to deliver our soldiers onto the beaches of the enemies"
+
+mountaineer_training:0 "Training Up Mountaineers"
+mountaineer_training_desc:0 "Although Norway is famous for its mountains it is also famous for its fjords. Given the choice of training up a force to punch through the mountains easily, or push across the fjords we have gone with the former."
+
+mountain_artillery:0 "Improved Mountain Artillery"
+mountain_artillery_desc:0 "Although we have come up with a design which will benefit our artillery use outside of mountains, we have also come up with several new key features to help fight in the steep terrain"
+
+integrate_nor:0 "Integration of Norway"
+integrate_nor_desc:0 "Our invasion of norway has been successful, and now it is time to introduce the people who lived in the former country to the ideas of the Wizolution"
+
+spread_wizolution_finland:0 "Spread the Wizolution to Finland"
+spread_wizolution_finland_desc:0 "Finland is the one of the next logical targets besides Norway as we not naive enough to think we currently have the capability to destroy the Fascist meance to the south"
+
+finnish_winter:0 "Finnish Winter Aclimation"
+finnish_winter_desc:0 "As we advance into Finland it is clear that we need to prepare our troops for the winter storms that may occur at any time. This includes how to start fires with minimal materials and how to scavenge off the land."
+
+infranstructure_finland:0 "Infrastrucutre for Finnish Invasion"
+infranstructure_finland_desc:0 "As we move further into Finland we currently are facing a massive supply issues which we can attempt to alleviate by increasing railways heading up north."
+
+elite_training:0 "Elite Force Deployal"
+elite_training_desc:0 "We are now ready to deploy the Elite Wizards who have been training non-stop since the start of the Wizolution who are more than ready to die for our cause!"
+
+push_soldiers_1:0 "Push the Soldiers"
+push_soldiers_1_desc:0 "We must ensure that our soldiers are giving EVERYTHING to the fight against Finland, and as such officers must become stricter in doling out justice for cowards."
+
+integrate_fin:0 "Integration of Finland"
+integrate_fin_desc:0 "Our armies efforts have borne fruit as we have capitulated the oppressive Finnish government of old and are now ready to integrate their previous citizens into the cause of the Wizolution"
+
+scandanavia_unification:0 "Unification of Mainland Scandanavia"
+scandanavia_unification_desc:0 "All of our previous efforts have led to this momentous occasion in which we take the first major step of cementing the Wizolution's role in the world. We have had many failures, but from those failures we have learned and are readier than ever to continue spreading the Wizolution!"

@@ -1,0 +1,11 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_supreme_wizard_event_image"
+		texturefile = "gfx/event_pictures/supreme_wizard.dds"
+	}
+	spriteType = {
+		name = "GFX_sweden_falls"
+		texturefile = "gfx/event_pictures/sweden_falls.dds"
+	}
+}

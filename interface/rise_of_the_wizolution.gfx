@@ -1,0 +1,9 @@
+spriteTypes = {
+
+spriteType = {
+		name = "GFX_rise_of_the_wizolution_bookmark"
+		texturefile = "gfx/interface/rise_of_the_wizolution.dds"
+	}
+	
+
+}

@@ -1,0 +1,33 @@
+division_template = {
+	name = "Wizard Mountaineers"
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }
+	}
+}
+units = {
+	division= {
+	name = "Wizard Mountain Men"
+		location = 9066 # 
+		division_template = "Wizard Mountaineers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {
+	name = "Wizard Mountain Men"
+		location = 3111 # 
+		division_template = "Wizard Mountaineers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+		division= {
+	name = "Wizard Mountain Men"
+		location = 6207 # 
+		division_template = "Wizard Mountaineers"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+}

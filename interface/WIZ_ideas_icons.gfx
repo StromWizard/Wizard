@@ -1,0 +1,50 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_idea_chaos_reigns"
+		texturefile = "gfx/interface/ideas/chaos_reigns.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_full_loyalty_of_the_army"
+		texturefile = "gfx/interface/ideas/full_loyalty_of_the_army.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_wizardian_economic_theory"
+		texturefile = "gfx/interface/ideas/wizardian_economic_theory.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_indoctrinated_children"
+		texturefile = "gfx/interface/ideas/indoctrinated_children.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_wizardian_research_theory"
+		texturefile = "gfx/interface/ideas/wizardian_research_theory.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_mechanized_farming"
+		texturefile = "gfx/interface/ideas/mechanized_farming.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_no_military_loyalty"
+		texturefile = "gfx/interface/ideas/no_military_loyalty.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_low_military_loyalty"
+		texturefile = "gfx/interface/ideas/low_military_loyalty.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_winter_warfare"
+		texturefile = "gfx/interface/ideas/winter_warfare.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_push_soldiers_1"
+		texturefile = "gfx/interface/ideas/push_soldiers_1.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_lessons_learned"
+		texturefile = "gfx/interface/ideas/lessons_learned.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_patriotic_peoples"
+		texturefile = "gfx/interface/ideas/patriotic_peoples.dds"	
+	}
+}
