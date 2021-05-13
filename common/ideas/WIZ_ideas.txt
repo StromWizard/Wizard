@@ -1,0 +1,466 @@
+ideas = {
+###CHAOS REIGNS###
+	country = {
+		chaos_reigns = {
+			picture = chaos_reigns
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_gain = -0.5
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.8
+				army_org_factor = -0.15
+				industrial_capacity_factory = -0.5
+			}
+		}
+		###CHAOS REIGNS LESSER###
+		chaos_reigns_lesser = {
+			picture = chaos_reigns
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_gain = -0.4
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.4
+				army_org_factor = -0.15
+				industrial_capacity_factory = -0.35
+			}
+		}
+		###CHAOS REIGNS GREATER###
+		chaos_reigns_greater = {
+			picture = chaos_reigns
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_gain = -0.75
+				consumer_goods_factor = 0.25
+				conscription_factor = -0.9
+				army_org_factor = -0.25
+				industrial_capacity_factory = -0.75
+			}
+		}
+		###FULL LOYALTY OF THE ARMY###
+		full_loyalty_of_the_army = {
+			picture = full_loyalty_of_the_army
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			army_org_factor = 0.1
+			army_org_regain = 0.05
+			max_planning_factor = -0.15
+			planning_speed = -0.2
+			conscription_factor = 0.1
+		}
+	}
+	###WIZARDIAN ECONOMIC THEORY###
+	wizardian_economic_theory = {
+			picture = wizardian_economic_theory
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = -0.05
+		}
+	}
+	###INDOCTRINATED CHILDREN###
+	indoctrinated_children = {
+			picture = indoctrinated_children
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			conscription = 0.005
+			political_power_gain = -0.1
+			war_support_factor = 0.1
+		}
+	}
+	###WIZARDIAN RESEARCH THEORY###
+	wizardian_research_theory = {
+			picture = wizardian_research_theory
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			research_speed_factor = 0.1
+			}
+		}
+			###MECHANIZED FARMING###
+			
+	mechanized_farming = {
+	picture = mechanized_farming
+	
+	allowed = { 
+				
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			conscription_factor = 0.05   
+			monthly_population = 0.15}
+		}
+###NO MILITARY LOYALTY###
+
+		no_military_loyalty = {
+			picture = no_military_loyalty
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_gain = -0.15
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				conscription = -0.01
+				army_org_factor = -0.15
+			}
+		}
+
+###LOW MILITARY LOYALTY###
+
+		low_military_loyalty = {
+			picture = low_military_loyalty
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_gain = -0.05
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				conscription = -0.005
+				army_org_factor = -0.10
+			}
+		}
+	winter_warfare = {
+			picture = winter_warfare
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				supply_consumption_factor = -0.10
+				winter_attrition_factor = -0.25
+			}
+		}
+		push_soldiers_1 = {
+			picture = push_soldiers_1
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				war_support_factor = -0.05
+				army_attack_factor = 0.25
+				army_defence_factor = -0.10
+			}
+		}
+		lessons_learned = {
+			picture = lessons_learned
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_org_factor = 0.10
+				army_org_regain = 0.05
+				army_speed_factor = 0.10
+				attrition = -0.10
+			}
+		}
+		patriotic_peoples = {
+			picture = patriotic_peoples
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			army_attack_factor = 0.10
+			army_defence_factor = 0.10
+			conscription = 0.01
+			war_support_factor = 0.15
+			}
+		}
+		advanced_infantry = {
+			picture = advanced_infantry
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_org_factor = 0.15
+				army_org_regain = 0.1
+				army_speed_factor = 0.10
+				attrition = -0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				conscription = 0.005
+			}
+		}
+		equipment_payments = {
+			picture = equipment_payments
+			
+			allowed = { 
+				tag = WIZ
+			}	
+			
+			available = {
+			}
+			
+			cancel = {
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_factory_max_efficiency_factor = -0.03
+			}
+		}
+	}
+}

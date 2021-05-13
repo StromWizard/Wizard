@@ -1,0 +1,152 @@
+﻿capital = 99
+set_research_slots = 3
+oob = "WIZ_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	tech_support = 1
+	early_fighter = 1
+}
+
+set_convoys = 20
+
+add_ideas = {
+chaos_reigns
+no_military_loyalty
+}
+
+1939.1.1 = {
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 5
+	fascism = 10
+	communism = 80
+	neutrality = 5
+}
+
+create_country_leader = {
+	name = "The Supreme Wizard"
+	desc = ""
+	picture = "thesupremewizard.dds"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+create_field_marshal = {
+	name = "Marshall Wizard"
+	picture = "marshall_wizard.dds"
+	traits = { defensive_doctrine urban_assault_specialist old_guard }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Armored Wizard"
+	picture = "armored_wizard.dds"
+	traits = { armor_officer panzer_leader}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Charismatic Wizard"
+	picture = "charismatic_wizard.dds"
+	traits = { trait_cautious }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Infantry Wizard"
+	picture = "infantry_wizard.dds"
+	traits = {infantry_officer infantry_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Artillery Wizard"
+	picture = "artillery_wizard.dds"
+	traits = { bearer_of_artillery }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 20
+		communism = 5
+		neutrality = 50
+	}
+}

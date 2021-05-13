@@ -1,0 +1,43 @@
+bookmarks = {
+	bookmark = {
+		name = "Rise Of the Wizolution"
+		desc = "RISE_OF_THE_WIZOLUTION_LOC"
+		date = 1936.1.1.12
+		picture = "GFX_rise_of_the_wizolution_bookmark"
+		default_country = "WIZ"
+		default = yes
+		
+		"WIZ"={
+			history = "WIZ_ROTW_LOC"
+			ideology = communism
+			available = { has_dlc = "Waking the Tiger" }
+			ideas = {
+				chaos_reigns
+				no_military_loyalty
+			}
+			focuses = {
+			}
+		}
+		"WIZ"={
+			history = "WIZ_ROTW_LOC"
+			ideology = communism
+			available = { NOT = { has_dlc = "Waking the Tiger" } }
+			ideas = {
+			chaos_reigns
+			}
+			focuses = {
+
+			}
+		}
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		# minors from DLC ####
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

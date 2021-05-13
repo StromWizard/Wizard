@@ -1,0 +1,1317 @@
+﻿focus_tree = {
+	id = wizardian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = WIZ
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 6000 y = 2000 }
+############################MAIN PATHWAY###########################################
+
+####CHAOS IN THE CAPITAL####
+	focus = {
+		id = chaos_in_the_capital
+		icon = GFX_goal_chaos_in_the_capital
+		x = 30
+		y = 1
+	#relative_position_id = AST_empower_the_workers
+		
+		available = {
+		}
+		bypass = {
+
+		}
+		
+		cost = 5
+	#prerequisite = { focus = AST_workers_paradise }
+		
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+				ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = chaos_reigns
+				add_idea = chaos_reigns_greater
+			}
+		}
+	}	
+		####CENSOR THE PRESS####
+		focus = {
+		id = censor_the_press
+		icon = GFX_goal_censor_the_press
+		x = -2
+		y = 1
+	relative_position_id = chaos_in_the_capital
+		bypass = {
+				}
+		
+		cost = 5
+	prerequisite = { focus = chaos_in_the_capital }
+		
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}
+				ai_will_do = {
+			factor = 1
+			modifier = {
+				JAP = { has_government = communism }
+				factor = 0
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = chaos_reigns_greater
+				add_idea = chaos_reigns
+			}
+		}
+	}
+	
+	####ASSEMBLE THE WIZARDS####
+	focus = {
+		id = assemble_the_wizards
+		icon = GFX_goal_assemble_the_wizards
+		x = 2
+		y = 1
+	relative_position_id = chaos_in_the_capital
+		bypass = {
+				}
+		
+		cost = 5
+	prerequisite = { focus = chaos_in_the_capital 
+	}
+		available = {
+		NOT = { has_idea = chaos_reigns_greater}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= {
+			swap_ideas = {
+				remove_idea = chaos_reigns
+				add_idea = chaos_reigns_lesser	
+			}
+		}
+	
+	}	
+
+	
+
+	###NEW WIZARDIAN ECONOMIC THEORY###
+	focus = {
+		id = wizardian_economic_theory
+		icon = GFX_goal_wizardian_economic_theory
+		x = -1
+		y = 1
+	relative_position_id = assemble_the_wizards
+		bypass = {
+				}
+		
+		cost = 5
+	prerequisite = { focus = assemble_the_wizards 
+	}
+		available = {
+		NOT = { has_idea = chaos_reigns_greater}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= {
+				add_ideas = wizardian_economic_theory	
+			}
+		}
+		
+		###ADD THE WIZOLUTION TO THE CURRICULUM###
+			focus = {
+		id = wizolution_to_curriculum
+		icon = GFX_goal_wizolution_to_curriculum
+		x = 1
+		y = 1
+	relative_position_id = censor_the_press
+		bypass = {
+				}
+		
+		cost = 5
+	prerequisite = { focus = censor_the_press 
+	}
+		available = {
+		NOT = { has_idea = chaos_reigns_greater}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward = {
+				add_ideas = indoctrinated_children	
+			}
+		}
+		###NEW WIZARDIAN RESEARCH THEORY###
+		focus = {
+		id = wizardian_research_theory
+		icon = GFX_goal_wizardian_research_theory
+		x = 1
+		y = 1
+	relative_position_id = wizolution_to_curriculum
+		bypass = {
+				}
+		
+		cost = 5
+	prerequisite = { focus = wizolution_to_curriculum 
+	}
+	prerequisite = {focus = wizardian_economic_theory}
+		available = {
+		NOT = { has_idea = chaos_reigns_greater}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward = {
+				add_ideas = wizardian_research_theory
+				add_research_slot = 1
+				remove_ideas = chaos_reigns_lesser
+			}
+		}
+		###SPREAD THE WORD OF THE WIZOLUTION###
+		focus = {
+		id = spread_wizolution_1
+		icon = GFX_goal_spread_wizolution_1
+		x = 0
+		y = 1
+	relative_position_id = wizardian_research_theory
+		bypass = {
+				}
+		
+		cost = 5
+	prerequisite = { focus = wizardian_research_theory 
+	}
+		available = {
+		NOT = { has_idea = chaos_reigns_greater}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= {
+			create_wargoal = {
+    type = annex_everything target = SWE	
+			}
+		}
+	
+	}
+	###RAISE THE RESERVES###
+focus = {
+		id = raise_the_reserves
+		icon = GFX_goal_raise_the_reserves
+		x = 1
+		y = 1
+	relative_position_id = spread_wizolution_1
+		bypass = {
+				}
+		
+		cost = 2
+	prerequisite = { focus = spread_wizolution_1 
+	}
+		available = { has_war_with = SWE
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		bypass = { not = { country_exists = SWE}}
+	completion_reward = { load_oob = WIZ_conscripts
+
+		}
+	}
+###WEAPON REQUISITIONS###
+	focus = {
+		id = weapon_requisitions
+		icon = GFX_goal_weapon_requisitions
+		x = -1
+		y = 1
+	relative_position_id = spread_wizolution_1
+		bypass = {
+				}
+		
+		cost = 4
+	prerequisite = { focus = spread_wizolution_1 
+	}
+		available = { has_war_with = SWE
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		bypass = { not = { country_exists = SWE}}
+	completion_reward = { 
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 1500
+    producer = WIZ
+	}
+	add_equipment_to_stockpile = {
+    type = support_equipment
+    amount = 500
+    producer = WIZ
+				}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 500
+    producer = WIZ
+				}
+			}
+
+		}
+### INCREASE WIZARD CONSCRIPTION####
+focus = {
+		id = conscript_wizards
+		icon = GFX_goal_conscript_wizards
+		x = 0
+		y = 1
+	relative_position_id = raise_the_reserves
+		bypass = {
+				}
+		
+		cost = 4
+	prerequisite = { focus = raise_the_reserves 
+	}
+		available = { has_war_with = SWE
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		bypass = { not = { country_exists = SWE}}
+	completion_reward = { add_ideas = extensive_conscription
+			}
+
+		}
+	###UTILIZE CROPDUSTERS###
+			focus = {
+		id = utilize_cropdusters
+		icon = GFX_goal_utilize_cropdusters
+		x = 0
+		y = 1
+	relative_position_id = weapon_requisitions
+		bypass = {}
+		
+		cost = 4
+	prerequisite = { focus = weapon_requisitions 
+	}
+		available = { has_war_with = SWE
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		bypass = { NOT = { country_exists = SWE}}
+	completion_reward = { 
+	add_equipment_to_stockpile = {
+    type = fighter_equipment
+    amount = 200
+    producer = WIZ
+	}
+			}
+
+		}
+###INTEGRATE SWEDEN###
+	focus = {
+		id = integrate_swe
+		icon = GFX_goal_integrate_swe
+		x = 1
+		y = 1
+	relative_position_id = utilize_cropdusters
+		bypass = {
+				}
+		
+		cost = 10
+	prerequisite = { focus = conscript_wizards 
+	}
+	prerequisite = { focus = utilize_cropdusters 
+	}
+		available = { not = { country_exists = SWE}
+		}
+complete_tooltip = { }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { add_political_power = 50}
+	
+			}
+			########WAR WITH FINLAND#############
+focus = {
+		id = spread_wizolution_finland
+		icon = GFX_goal_spread_wizolution_finland
+		x = -3
+		y = 1
+	relative_position_id = integrate_swe
+	bypass = { not = { country_exists = FIN}
+				}
+		
+		cost = 5
+	prerequisite = { focus = integrate_swe 
+	}
+		available = { has_war_with = FIN
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			create_wargoal = {
+    type = annex_everything target = FIN
+			}
+			}
+	
+			}
+			######WINTER TRAINING#############
+	focus = {
+		id = finnish_winter
+		icon = GFX_goal_finnish_winter
+		x = -1
+		y = 1
+	relative_position_id = spread_wizolution_finland
+	bypass = { not = { country_exists = FIN}
+				}
+		
+		cost = 4
+	prerequisite = { focus = spread_wizolution_finland 
+	}
+		available = { has_war_with = FIN
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { add_ideas = winter_warfare
+	
+			}
+	
+		}
+	########ELITE TRAINING#######	
+	focus = {
+		id = elite_training
+		icon = GFX_goal_elite_training
+		x = 1
+		y = 1
+	relative_position_id = spread_wizolution_finland
+	bypass = { not = { country_exists = FIN}
+				}
+		
+		cost = 4
+	prerequisite = { focus = spread_wizolution_finland 
+	}
+		available = { has_war_with = FIN
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			load_oob = WIZ_elite	
+			}
+	}
+	
+	#############PUSH SOLDIERS############
+	focus = {
+		id = push_soldiers_1
+		icon = GFX_goal_push_soldiers_1
+		x = 0
+		y = 1
+	relative_position_id = elite_training
+	bypass = { not = { country_exists = FIN}
+				}
+		
+		cost = 4
+	prerequisite = { focus = elite_training 
+	}
+		available = { has_war_with = FIN
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			add_timed_idea = { idea = push_soldiers_1 days = 365}
+			}
+	}
+	##########INFRASTRUCTURE IMPROVEMENT########
+	focus = {
+		id = infrastructure_finland
+		icon = GFX_goal_infrastructure_finland
+		x = 0
+		y = 1
+	relative_position_id = finnish_winter
+	bypass = { not = { country_exists = FIN}
+				}
+		
+		cost = 4
+	prerequisite = { focus = finnish_winter 
+	}
+		available = { has_war_with = FIN
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			38 = {
+			add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+				}
+			}
+			666 = {
+			add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+				}
+			}
+			}
+	}
+	########INTEGRATE FINLAND########
+focus = {
+		id = integrate_fin
+		icon = GFX_goal_integrate_fin
+		x = 1
+		y = 1
+	relative_position_id = infrastructure_finland
+		bypass = {
+				}
+		
+		cost = 10
+	prerequisite = { focus = push_soldiers_1 
+	}
+	prerequisite = { focus = infrastructure_finland 
+	}
+		available = { not = { country_exists = FIN}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { add_political_power = 50}
+	
+			}
+			################WAR WITH NORWAY##############
+			focus = {
+		id = spread_wizolution_norway
+		icon = GFX_goal_spread_wizolution_norway
+		x = 3
+		y = 1
+	relative_position_id = integrate_swe
+	bypass = { not = { country_exists = NOR}
+				}
+		
+		cost = 5
+	prerequisite = { focus = integrate_swe 
+	}
+		available = { has_war_with = NOR
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			create_wargoal = {
+    type = annex_everything target = NOR	
+			}
+			}
+	
+			}
+			########MOUNTAINEERS######
+		focus = {
+		id = mountaineer_training
+		icon = GFX_goal_mountaineer_training
+		x = 1
+		y = 1
+	relative_position_id = spread_wizolution_norway
+	bypass = { not = { country_exists = NOR}
+				}
+		
+		cost = 5
+	prerequisite = { focus = spread_wizolution_norway 
+	}
+		available = { has_war_with = NOR
+		}
+		mutually_exclusive = {
+		focus = marine_training
+	}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			load_oob = WIZ_mountaineers
+			set_technology = {tech_mountaineers = 1}
+			}
+	
+			}
+			##########MARINES########
+		focus = {
+		id = marine_training
+		icon = GFX_goal_marine_training
+		x = -1
+		y = 1
+	relative_position_id = spread_wizolution_norway
+	bypass = { not = { country_exists = NOR}
+				}
+		
+		cost = 5
+	prerequisite = { focus = spread_wizolution_norway 
+	}
+		available = { has_war_with = NOR
+		}
+	mutually_exclusive = {
+		focus = mountaineer_training
+	}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			load_oob = WIZ_marines
+			set_technology = {marines = 1}
+			}
+	
+			}
+			############LANDING CRAFT#########
+focus = {
+		id = landing_craft
+		icon = GFX_goal_landing_craft
+		x = 0
+		y = 1
+	relative_position_id = marine_training
+	bypass = { not = { country_exists = NOR}
+				}
+		
+		cost = 5
+	prerequisite = { focus = marine_training 
+	}
+		available = { has_war_with = NOR
+		}
+	mutually_exclusive = {
+	}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 
+			add_tech_bonus = {
+    bonus = 1
+    uses = 1
+    category = tp_tech
+}
+		}
+	
+	}
+	##########ARTILLERY ADVANCEMENTS######
+	focus = {
+		id = mountain_artillery
+		icon = GFX_goal_mountain_artillery
+		x = 0
+		y = 1
+	relative_position_id = mountaineer_training
+	bypass = { not = { country_exists = NOR}
+				}
+		
+		cost = 5
+	prerequisite = { focus = mountaineer_training 
+	}
+		available = { has_war_with = NOR
+		}
+	mutually_exclusive = {
+	}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { add_tech_bonus = {
+    bonus = 1
+    uses = 1
+    category = artillery
+}
+		}
+	
+	}
+	
+	#########INTEGRATE NORWAY########
+	focus = {
+		id = integrate_nor
+		icon = GFX_goal_integrate_nor
+		x = 1
+		y = 1
+	relative_position_id = landing_craft
+		bypass = {
+				}
+		
+		cost = 10
+	prerequisite = { focus = mountain_artillery focus = landing_craft 
+	}
+		available = { not = { country_exists = NOR}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { add_political_power = 50}
+	
+			}
+			###########MAINLAND SCANDANAVIA UNIFICATION#########
+			focus = {
+		id = scandanavia_unification
+		icon = GFX_goal_scandanavia_unification
+		x = -3
+		y = 1
+	relative_position_id = integrate_nor
+		bypass = {
+				}
+		
+		cost = 10
+	prerequisite = { focus = integrate_nor
+	}
+	prerequisite = {focus = integrate_fin }
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { add_political_power = 150 
+	stability_factor = 0.15 
+	add_ideas = lessons_learned 
+	swap_ideas = {
+	remove_idea = indoctrinated_children
+	add_idea = patriotic_peoples}
+	}
+	
+}
+		##########################################INDUSTRIAL PATHWAY###########################################
+		
+	###COLLECTIVIZE THE INDUSTRIALISTS PROPERTY###
+focus = {
+		id = collectivize
+		icon = GFX_goal_collectivize
+		x = 5
+		y = 1
+		
+		cost = 5
+		available = {
+		NOT = { has_idea = chaos_reigns_greater has_idea = chaos_reigns has_idea = chaos_reigns_lesser} 
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+completion_reward= {
+99 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+				}
+			}
+58 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+				}
+			}
+138 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+				}	
+			}
+		}	
+	}	
+			
+		###INITIAL INDUSTRIAL REPORT###
+		focus = {
+		id = initial_industrial_report
+		icon = GFX_goal_initial_industry_report
+		x = 0
+		y = 1
+	relative_position_id = collectivize
+		bypass = {
+				}
+		prerequisite = { focus = collectivize 
+	}
+		cost = 5
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 99 = { add_resource = {
+    type = steel
+    amount = 12
+	} }
+	99 = {set_building_level = {
+    type = infrastructure
+    level = 10
+    instant_build = yes}
+	
+}
+138 = {set_building_level = {
+    type = infrastructure
+    level = 8
+    instant_build = yes}
+	
+}
+			}
+
+		}
+		###STABILIZED INSDUSTRIAL REPORT###
+	focus = {
+		id = stabilized_report
+		icon = GFX_goal_stabilized_report
+		x = -1
+		y = 1
+	relative_position_id = initial_industrial_report
+		prerequisite = { focus = initial_industrial_report 
+	}
+		bypass = {
+				}
+		
+		cost = 5
+
+available = { NOT = {has_idea = chaos_reigns}	}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = { 99 = { add_manpower = 20000} 58 = { add_manpower = 20000} 138 = { add_manpower = 20000} add_ideas = mechanized_farming
+			}
+
+		}
+		
+		####SWEDISH INDUSTRY REPORT####
+		focus = {
+		id = swe_industry_report
+		icon = GFX_goal_swe_industry_report
+		x = 1
+		y = 1
+	relative_position_id = initial_industrial_report
+		prerequisite = { focus = initial_industrial_report 
+	}
+		bypass = {
+				}
+		
+		cost = 7
+
+available = { NOT = { country_exists = SWE} 
+139 = {is_owned_by = WIZ}
+141 = {is_owned_by = WIZ}
+140 = {is_owned_by = WIZ}
+38 = {is_owned_by = WIZ}
+666 = {is_owned_by = WIZ}
+}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = {
+139 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+				}
+			}
+141 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+				}
+			}
+141 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+					}
+				}
+			}
+		}
+		############FINNISH INDUSTRY REPORT#########
+		focus = {
+		id = fin_industry_report
+		icon = GFX_goal_fin_industry_report
+		x = 0
+		y = 1
+	relative_position_id = stabilized_report
+		prerequisite = { focus = stabilized_report 
+	}
+		bypass = {
+				}
+		
+		cost = 7
+
+available = { NOT = { country_exists = NOR} 
+142 = {is_owned_by = WIZ}
+110 = {is_owned_by = WIZ}
+}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = {
+110 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = yes
+				}
+				add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+				}
+			}
+142 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+				}
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+				}
+			}
+		}
+	}
+		
+		##############NORWAY INDUSTRY REPORT######
+		focus = {
+		id = nor_industry_report
+		icon = GFX_goal_nor_industry_report
+		x = 0
+		y = 1
+	relative_position_id = swe_industry_report
+		prerequisite = { focus = swe_industry_report 
+	}
+		bypass = {
+				}
+		
+		cost = 7
+
+available = { NOT = { country_exists = FIN} 
+146 = {is_owned_by = WIZ}
+149 = {is_owned_by = WIZ}
+111 = {is_owned_by = WIZ}
+}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = {
+111 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes
+				}
+			}
+146 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+				}
+			}
+149 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes
+					}
+				}
+			}
+		}
+				########SCANDANAVIAN BUILDUP#########
+focus = {
+		id = scandanavian_buildup
+		icon = GFX_goal_scandanavian_buildup
+		x = 1
+		y = 1
+	relative_position_id = fin_industry_report
+		prerequisite = { focus = fin_industry_report 
+	}
+	prerequisite = { focus = nor_industry_report 
+	}
+		bypass = {
+				}
+		
+		cost = 7
+
+available = { 
+110= {is_owned_by = WIZ}
+141 = {is_owned_by = WIZ}
+111 = {is_owned_by = WIZ}
+137 = {is_owned_by = WIZ}
+}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	completion_reward = {
+110 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+				}
+			}
+141 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+				}
+			}
+37 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+					}
+				}
+111 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes
+					}
+				}
+			}
+		}
+	###########################MILITARY PATHWAY###########################################
+	###CLEANSE THE OLD GUARD###
+focus = {
+		id = cleanse_the_old_guard
+		icon = GFX_goal_cleanse_the_old_guard
+		x = 15
+		y = 1
+		
+		cost = 5
+		available = {
+		NOT = { has_idea = chaos_reigns has_idea = chaos_reigns_greater}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { swap_ideas = {
+remove_idea = no_military_loyalty
+add_idea = low_military_loyalty}
+	
+		}
+	}
+	###REFORM THE MILITARY###
+	focus = {
+		id = reform_the_military
+		icon = GFX_goal_reform_the_military
+		x = -4
+		y = 1
+		relative_position_id = cleanse_the_old_guard
+		prerequisite = { focus = cleanse_the_old_guard 
+	}
+		cost = 3
+		available = {
+		NOT = { has_idea = chaos_reigns_lesser}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { 
+remove_ideas = low_military_loyalty
+army_experience = 25
+		}
+	}
+	#######WEAPON ADVANCEMENTS########
+focus = {
+		id = weapon_advancements
+		icon = GFX_goal_weapon_advancements
+		x = -1
+		y = 1
+		relative_position_id = reform_the_military
+		prerequisite = { focus = reform_the_military 
+	}
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { 
+add_tech_bonus = {
+    bonus = 1
+    uses = 2
+    category = infantry_weapons
+}
+		}
+	}
+	#########MOTORIZED DEVELOPMENT#############
+	focus = {
+		id = motorized_development
+		icon = GFX_goal_motorized_development
+		x = 1
+		y = 1
+		relative_position_id = reform_the_military
+		prerequisite = { focus = reform_the_military 
+	}
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { 
+add_timed_idea = { idea = equipment_payments days = 90 }
+add_equipment_to_stockpile = {
+    type = motorized_equipment
+    amount = 250
+    producer = GER
+	}
+add_tech_bonus = {
+    bonus = 2
+    uses = 1
+    category = motorized_equipment
+}
+		}
+	}
+	###########DOCTRINE REEVALUATION###########
+		focus = {
+		id = doctrine_reevaluation
+		icon = GFX_goal_doctrine_reevaluation
+		x = -1
+		y = 1
+		relative_position_id = motorized_development
+		prerequisite = { focus = motorized_development 
+	}
+	prerequisite = { focus = weapon_advancements 
+	}
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { 
+add_tech_bonus = {
+    bonus = 1
+    uses = 2
+    category = land_doctrine
+}
+		}
+	}
+	###############ARMOR ADVANCEMENT##########
+	focus = {
+		id = armor_advancement
+		icon = GFX_goal_armor_advancement
+		x = -1
+		y = 1
+		relative_position_id = doctrine_reevaluation
+		prerequisite = { focus = doctrine_reevaluation 
+	}
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { 
+add_timed_idea = { idea = equipment_payments days = 90}
+add_equipment_to_stockpile = {
+    type = light_tank_equipment
+    amount = 150
+    producer = GER
+	}
+add_tech_bonus = {
+    bonus = 1
+    uses = 2
+    category = armor
+}
+		}
+	}
+	#########SUPPORT COMPANY DEVELOPMENT###########
+	focus = {
+		id = support_development
+		icon = GFX_goal_support_development
+		x = 1
+		y = 1
+		relative_position_id = doctrine_reevaluation
+		prerequisite = { focus = doctrine_reevaluation 
+	}
+		cost = 5
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { 
+add_equipment_to_stockpile = {
+    type = support_equipment
+    amount = 250
+    producer = WIZ
+	}
+add_tech_bonus = {
+    bonus = 1
+    uses = 1
+    category = support_tech
+}
+		}
+	}
+	###########ADVANCED INFANTRY TECHNIQUES########
+	focus = {
+		id = advanced_infantry
+		icon = GFX_goal_advanced_infantry
+		x = -1
+		y = 1
+		relative_position_id = support_development
+		prerequisite = { focus = armor_advancement 
+	}
+		prerequisite = { focus = support_development 
+	}
+		cost = 5
+		available = {
+		has_idea = lessons_learned
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= { swap_ideas = {
+remove_idea = lessons_learned
+ add_idea = advanced_infantry
+		}
+	}
+}
+	############REFORM THE AIRFORCE###########
+focus = {
+		id = reform_the_airforce
+		icon = GFX_goal_reform_the_airforce
+		x = 0
+		y = 1
+		relative_position_id = cleanse_the_old_guard
+		prerequisite = { focus = cleanse_the_old_guard 
+	}
+		cost = 3
+		available = {
+		NOT = { has_idea = chaos_reigns_lesser}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= {
+air_experience = 25
+		}
+	}
+	###########CAS DEVELOPMENT###########
+	focus = {
+		id = cas_development
+		icon = GFX_goal_cas_development
+		x = 1
+		y = 1
+		relative_position_id = reform_the_airforce
+		prerequisite = { focus = reform_the_airforce 
+	}
+		cost = 5
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= {
+add_tech_bonus = {
+    bonus = 1
+    uses = 1
+    category = cas_bomber
+}
+		}
+	}
+	###########FIGHTER DEVELOPMENT###########
+	focus = {
+		id = fighter_development
+		icon = GFX_goal_fighter_development
+		x = -1
+		y = 1
+		relative_position_id = reform_the_airforce
+		prerequisite = { focus = reform_the_airforce 
+	}
+		cost = 5
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+completion_reward= {
+add_tech_bonus = {
+    bonus = 1
+    uses = 1
+    category = light_fighter
+}
+		}
+	}
+}
